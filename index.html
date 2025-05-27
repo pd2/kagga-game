@@ -15,12 +15,12 @@
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel="icon" href="https://cdn.glitch.global/d7d06347-f9cb-4cda-b015-76c51bd9b171/Icon.png" >
-    <link rel="manifest" href="/manifest.json" >
+    <link rel="manifest" href="manifest.json" >
     
     <title>Kagga game</title>
-    <link rel="stylesheet" href="/style.css" >
+    <link rel="stylesheet" href="style.css" >
     <script src="DragDropTouch.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -71,7 +71,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker
-            .register("/serviceWorker.js")
+            .register("serviceWorker.js")
             .then(res => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err))
         })
