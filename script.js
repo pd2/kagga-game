@@ -17,7 +17,7 @@ let quotes, meanings, kagga_kn;
 
 async function get_kaggas() {
   
-  let responses = await fetch('/DVG_kaggas.txt');
+  let responses = await fetch('DVG_kaggas.txt');
   
   let quotes_all = await responses.json();
   
