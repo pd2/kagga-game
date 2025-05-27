@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B50480XF8E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B50480XF8E');
+  </script>
+    
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="icon" href="https://cdn.glitch.global/d7d06347-f9cb-4cda-b015-76c51bd9b171/Icon.png" >
+    <link rel="manifest" href="/manifest.json" >
+    
+    <title>Kagga game</title>
+    <link rel="stylesheet" href="/style.css" >
+    <script src="DragDropTouch.js" defer></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Kagga game
+      </h1>
+    </header>
+    
+    <p id="info">
+      Practice your reasoning skills on a verse by DVG. 
+      Put the lines in the right order using the meaning of the Kagga.
+      <br>
+      <br> Click the start game button to begin
+    </p>
+    <button type="button" class="button" id="start">
+      Start Game <i class="rocket"></i>
+    </button>
+    <p id="reference"></p>
+    <p id="quote"></p>
+    <p id="message"></p>
+    
+    <p class="tooltip"><div>
+      <button id="share" onclick="ShareIt()" onmouseout="outFunc()">
+      <span class="tooltiptext" id="myTooltip">Copy to clipboard</span></button>
+    </div></p>
+    
+    <p id="meaning"></p>
+    <div id="image"> <img class="img" oncontextmenu="return false;" draggable="false" src="https://cdn.glitch.global/d7d06347-f9cb-4cda-b015-76c51bd9b171/DVGundappa_stamp.jpg">
+    </div>
+    
+    <div id="dropZone">
+    <template id="dropBox">
+    <span class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+    </template>
+    </div>
+    
+    <p id ="lines" ondrop="multiItemsDrop(event)" ondragover="allowMultipleDrop(event)"></p>    
+    
+    <button type="button" class="button" id="check">Check</button>
+    <main>
+    <p id="settings"><div>
+      Kagga progression:
+    <input type="radio" id="rand" name="is_rand" value="1"><label for="rand"> Random </label>
+    <input type="radio" id="seq"  name="is_rand" value="0" checked="checked"><label for="seq"> Sequential </label>
+    </div></p>
+    </main>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+        })
+      }
+    </script>
+  <footer>
+    <span style="white-space: nowrap"> &copy; 2024 <a href="https://www.pradeepd.com/hobbies/apps">Pradeep D</a>, <a href="https://www.iseek.page">iSeek</a>. Ref: D V Gundappa, "Mankuthimmana Kagga", Halage Balapa</span>
+    <br> <a href="https://www.buymeacoffee.com/pradeepde">Buy me a coffee</a>
+  </footer>
+  </body>
+</html>
