@@ -2,10 +2,10 @@ const staticDev = "kagga_game"
 const service_worker_version = "v1.025782"
 const assets = [
   "/",
-  "/index.html",
-  "/style.css",
-  "/DVG_kaggas.txt",
-  "/script.js"
+  "index.html",
+  "style.css",
+  "DVG_kaggas.txt",
+  "script.js"
 ]
 
 self.addEventListener("install", installEvent => {
