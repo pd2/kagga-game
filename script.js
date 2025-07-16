@@ -291,7 +291,7 @@ var copyText;
 
 function ShareIt() {
   
-  let linkURL = "https://pd2.github.io/kagga-game/";
+  let linkURL = window.location.href;
   
   copyText = `#KaggaGame I learnt the meaning of mankuthimmana kagga no. ${ka_index+1} in ${Math.round(elapsedTime/1000)} sec at ${linkURL}`;
   
