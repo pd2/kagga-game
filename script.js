@@ -109,13 +109,13 @@ let lineQueue, quoteText, kaggaText, highlightPosition, startTime, ka_index = -1
 let Guess = [], cur_guess, cur_ans;
 let num_tries, is_random;
 
-let lastPlayedTs;
+let kagga_lastPlayedTs;
 
 function startGame() {
   
   var today = new Date();
   
-  if ( Na(new Date(lastPlayedTs), today) < 1) {
+  if ( Na(new Date(kagga_lastPlayedTs), today) < 1) {
     alert("Play a new puzzle tomorrow!")
     return;
   }
@@ -245,7 +245,7 @@ function gameOver() {
   dropZone.style.display = "flex";
   lines.style.display = "revert";
 
-  lastPlayedTs = new Date();
+  kagga_lastPlayedTs = new Date();
 
   elapsedTime = new Date().getTime() - startTime;
   // let time_taken = (elapsedTime/1000);
@@ -327,12 +327,12 @@ function get_history() {
   const lpts = localStorage.getItem('lpts') || noItemsFound_lastPlayedTs;
   
   ka_index = JSON.parse(ka);
-  lastPlayedTs = JSON.parse(lpts);
+  kagga_lastPlayedTs = JSON.parse(lpts);
 }
 
 function save_history() {
   const ka = JSON.stringify(ka_index);
-  const lpts = JSON.stringify(lastPlayedTs);
+  const lpts = JSON.stringify(kagga_lastPlayedTs);
   localStorage.setItem('ka_index', ka);
   localStorage.setItem('lpts', lpts);
 }
