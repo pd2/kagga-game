@@ -324,7 +324,7 @@ function Na(e, a) {
 function get_history() {
   const noItemsFound_ad = 0, noItemsFound_ku = -1, noItemsFound_lastPlayedTs = 0;
   const ka = localStorage.getItem('ka_index') || noItemsFound_ku;
-  const lpts = localStorage.getItem('lpts') || noItemsFound_lastPlayedTs;
+  const lpts = localStorage.getItem('kagga_lpts') || noItemsFound_lastPlayedTs;
   
   ka_index = JSON.parse(ka);
   kagga_lastPlayedTs = JSON.parse(lpts);
@@ -334,7 +334,7 @@ function save_history() {
   const ka = JSON.stringify(ka_index);
   const lpts = JSON.stringify(kagga_lastPlayedTs);
   localStorage.setItem('ka_index', ka);
-  localStorage.setItem('lpts', lpts);
+  localStorage.setItem('kagga_lpts', lpts);
 }
 
 get_history();
