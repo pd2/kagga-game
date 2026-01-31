@@ -1,5 +1,5 @@
 const staticDev = "kagga_game"
-const service_worker_version = "v1.025782"
+const service_worker_version = "v1.1"
 const assets = [
   "/",
   "index.html",
