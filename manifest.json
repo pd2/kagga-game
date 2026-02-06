@@ -4,7 +4,7 @@
   "start_url": "https://pd2.github.io/kagga-game/",
   "icons": [
     {
-      "src": "https://cdn.glitch.global/d7d06347-f9cb-4cda-b015-76c51bd9b171/Icon.png",
+      "src": "Icon.png",
       "sizes": "256x256",
       "type": "image/png"
     }
