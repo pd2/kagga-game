@@ -270,7 +270,7 @@ function gameOver() {
   check.style.display = "none";
   share.style.display = "block";
   
-  image.innerHTML = `<img class="img" draggable="false" src="https://cdn.glitch.global/d7d06347-f9cb-4cda-b015-76c51bd9b171/DVGundappa_stamp.jpg">`
+  image.innerHTML = `<img class="img" draggable="false" src="DVG_1.jpg">`
 
   document.body.className = "image";
   // document.body.className = "winner";
